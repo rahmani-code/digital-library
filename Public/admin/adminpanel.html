@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="admin-panel">
+      <aside class="sidebar">
+        <ul class="sidebar-menu">
+          <li>
+            <a href="#" data-target="dashboard"
+              ><i class="bx bxs-dashboard"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="books"
+              ><i class="bx bxs-book"></i> Books</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="users"
+              ><i class="bx bxs-user"></i> Users</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="settings"
+              ><i class="bx bxs-cog"></i> Settings</a
+            >
+          </li>
+        </ul>
+      </aside>
+      <div class="main-content">
+        <header>
+          <h1>Welcome to the Digital Library Admin Panel</h1>
+        </header>
+        <section id="dashboard" class="content-section active">
+          <h2>Dashboard</h2>
+          <table class="metrics-table">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Active Users</td>
+                <td id="active-users">120</td>
+              </tr>
+              <tr>
+                <td>Available Books</td>
+                <td id="available-books">450</td>
+              </tr>
+              <tr>
+                <td>Borrowed Books</td>
+                <td id="borrowed-books">75</td>
+              </tr>
+              <tr>
+                <td>Overdue Books</td>
+                <td id="overdue-books">10</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="books" class="content-section">
+          <h2>Books Management</h2>
+          <p>Add, edit, and delete book entries.</p>
+          <form id="book-form">
+            <label for="book-title">Book Title:</label>
+            <input type="text" id="book-title" name="book-title" required />
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required />
+
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre" required />
+
+            <label for="published-year">Published Year:</label>
+            <input
+              type="number"
+              id="published-year"
+              name="published-year"
+              required
+            />
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            <button type="submit">Add Book</button>
+          </form>
+          <table class="book-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Borrowed By</th>
+                <th>Overdue By</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="book-list">
+              <!-- Book rows will be added here dynamically -->
+            </tbody>
+          </table>
+        </section>
+        <section id="users" class="content-section">
+          <h2>User Management</h2>
+          <p>Create, edit, and delete users of the digital library.</p>
+          <form id="user-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit">Add User</button>
+          </form>
+          <table class="user-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="user-list">
+              <!-- User rows will be added here dynamically -->
+            </tbody>
+          </table>
+        </section>
+        <section id="settings" class="content-section">
+          <h2>Settings</h2>
+          <p>
+            Configure various aspects of the admin panel and the digital
+            library.
+          </p>
+          <button id="mode-toggle" class="mode-toggle">Toggle Dark Mode</button>
+        </section>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

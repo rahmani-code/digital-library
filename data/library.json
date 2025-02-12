@@ -1,0 +1,216 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Fiction",
+      "publishedYear": 1960,
+      "borrowedBy": "fazl",
+      "dueDate": "2025-02-01",
+      "description": "A gripping novel set in the American South, 'To Kill a Mockingbird' explores themes of racial injustice, loss of innocence, and moral growth through the eyes of Scout Finch, a young girl whose father, Atticus Finch, defends a black man accused of raping a white woman."
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Dystopian",
+      "publishedYear": 1949,
+      "borrowedBy": "fazl",
+      "dueDate": "2025-02-01",
+      "description": "'1984' is a chilling depiction of a totalitarian society under the rule of Big Brother. The protagonist, Winston Smith, works for the Party rewriting history, but begins to question the regime and seek the truth, making the novel a powerful critique of oppressive governments."
+    },
+    {
+      "id": 3,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Fiction",
+      "publishedYear": 1925,
+      "borrowedBy": "fazl",
+      "dueDate": "2025-02-26",
+      "description": "Set in the Roaring Twenties, 'The Great Gatsby' tells the story of Jay Gatsby's obsession with the beautiful Daisy Buchanan. Through the eyes of Nick Carraway, the novel critiques the American Dream and explores themes of love, wealth, and betrayal."
+    },
+    {
+      "id": 4,
+      "title": "Moby-Dick",
+      "author": "Herman Melville",
+      "genre": "Adventure",
+      "publishedYear": 1851,
+      "borrowedBy": null,
+      "dueDate": null,
+      "description": "'Moby-Dick' is the epic tale of Captain Ahab's obsessive quest to hunt down the elusive white whale, Moby Dick. Through the adventures of Ishmael, the novel explores deep themes of obsession, revenge, and the complexities of the human soul."
+    },
+    {
+      "id": 5,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genre": "Romance",
+      "publishedYear": 1813,
+      "borrowedBy": null,
+      "dueDate": null,
+      "description": "A timeless romance novel, 'Pride and Prejudice' follows Elizabeth Bennet as she navigates societal expectations, love, and personal growth. Her evolving relationship with the wealthy and aloof Mr. Darcy challenges both characters' prejudices and perceptions of one another."
+    },
+    {
+      "id": 6,
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "genre": "Fiction",
+      "publishedYear": 1951,
+      "borrowedBy": null,
+      "dueDate": null,
+      "description": "A coming-of-age novel, 'The Catcher in the Rye' follows Holden Caulfield, a disillusioned teenager, as he struggles to make sense of the adult world. His journey through New York City reflects his inner turmoil and his desire to protect the innocence of childhood."
+    },
+    {
+      "id": 7,
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "publishedYear": 1937,
+      "borrowedBy": "fazl",
+      "dueDate": "2025-02-26",
+      "description": "'The Hobbit' is a fantasy adventure that follows the journey of Bilbo Baggins, a hobbit who unexpectedly becomes part of a quest to reclaim a treasure guarded by the dragon Smaug. The story is filled with magical creatures, epic battles, and personal growth."
+    },
+    {
+      "id": 8,
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "genre": "Dystopian",
+      "publishedYear": 1932,
+      "borrowedBy": null,
+      "dueDate": null,
+      "description": "'Brave New World' presents a dystopian future where people are conditioned into a rigid caste system and live in a society driven by consumption, pleasure, and superficial happiness. The novel critiques the loss of individuality and the dangers of a society without personal freedom."
+    },
+    {
+      "id": 9,
+      "title": "The Road",
+      "author": "Cormac McCarthy",
+      "genre": "Post-apocalyptic",
+      "publishedYear": 2006,
+      "borrowedBy": null,
+      "dueDate": null,
+      "description": "'The Road' follows a father and his young son as they struggle to survive in a desolate, post-apocalyptic world. The novel is a haunting exploration of love, survival, and the bond between parent and child in the face of overwhelming despair."
+    },
+    {
+      "id": 10,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "genre": "Adventure",
+      "publishedYear": 1988,
+      "borrowedBy": null,
+      "dueDate": null,
+      "description": "'The Alchemist' is an allegorical novel about a young shepherd named Santiago who embarks on a journey to find a treasure. Along the way, he learns profound lessons about listening to his heart, following his dreams, and finding fulfillment in the journey itself."
+    },
+    {
+      "id": 11,
+      "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
+      "author": "Robert C. Martin",
+      "genre": "Computer Science",
+      "publishedYear": 2008,
+      "borrowedBy": null,
+      "dueDate": null,
+      "description": "In 'Clean Code,' Robert C. Martin offers invaluable insights into writing clean, maintainable, and efficient code. The book provides practical advice on refactoring, testing, and design principles to help developers write code that is both readable and robust."
+    },
+    {
+      "id": 12,
+      "title": "Introduction to Algorithms",
+      "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
+      "genre": "Computer Science",
+      "publishedYear": 2009,
+      "borrowedBy": null,
+      "dueDate": null,
+      "description": "Known as 'CLRS,' this comprehensive textbook is a staple in the field of algorithms. It covers a wide range of fundamental topics in algorithms, from sorting and searching to advanced topics such as dynamic programming, graph theory, and NP-completeness."
+    },
+    {
+      "id": 13,
+      "title": "The Pragmatic Programmer: Your Journey to Mastery",
+      "author": "Andrew Hunt, David Thomas",
+      "genre": "Computer Science",
+      "publishedYear": 1999,
+      "borrowedBy": null,
+      "dueDate": null,
+      "description": "A classic in software engineering, 'The Pragmatic Programmer' provides practical tips and best practices for developers to improve their coding skills, including advice on debugging, testing, and working with others in the software development process."
+    },
+    {
+      "id": 14,
+      "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+      "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+      "genre": "Computer Science",
+      "publishedYear": 1994,
+      "borrowedBy": null,
+      "dueDate": null,
+      "description": "'Design Patterns' introduces 23 foundational software design patterns for object-oriented systems. This book provides a common vocabulary for discussing design solutions and highlights patterns that have been proven to work across a wide range of software development scenarios."
+    },
+    {
+      "id": 15,
+      "title": "Artificial Intelligence: A Modern Approach",
+      "author": "Stuart Russell, Peter Norvig",
+      "genre": "Computer Science",
+      "publishedYear": 2009,
+      "borrowedBy": null,
+      "dueDate": null,
+      "description": "This comprehensive textbook on artificial intelligence covers a wide array of topics, including problem-solving, machine learning, robotics, and ethics in AI. It's widely regarded as the definitive guide to understanding AI in both theory and practice."
+    },
+    {
+      "id": 16,
+      "title": "Beautiful Disaster",
+      "author": "Jamie McGuire",
+      "genre": "Romance, Crime",
+      "publishedYear": 2011,
+      "borrowedBy": null,
+      "dueDate": null,
+      "description": "This romance novel follows the story of Abby Abernathy, a college student who is drawn into a whirlwind relationship with Travis Maddox, a bad boy with a troubled past. It's a passionate, intense story of love, emotional growth, and the complexities of relationships."
+    },
+    {
+      "id": 17,
+      "title": "The Chemistry of Death",
+      "author": "Simon Beckett",
+      "genre": "Crime, Thriller, Mystery",
+      "publishedYear": 2006,
+      "borrowedBy": "ayan",
+      "dueDate": "2025-02-01",
+      "description": "In this gripping thriller, forensic anthropologist David Hunter is called to a rural English village to investigate a series of mysterious deaths. As he uncovers secrets buried deep within the town, Hunter is drawn into a chilling and dangerous investigation that tests his skills and his moral compass."
+    },
+    {
+      "id": 1739395168837,
+      "title": "The Brothers Karamazov",
+      "author": "Fyodor Dostoevsky",
+      "genre": "Philosophical Fiction, Psychological Fiction",
+      "publishedYear": "1880",
+      "description": "The Brothers Karamazov is a profound philosophical novel that explores deep themes of faith, doubt, free will, and morality through the lives of the three Karamazov brothers—Dmitri, Ivan, and Alyosha. The novel revolves around their strained relationship with their corrupt and selfish father, Fyodor Pavlovich Karamazov, culminating in a dramatic murder mystery. Each brother represents a different ideological stance: Dmitri embodies passion and sensuality, Ivan wrestles with intellectualism and atheism, while Alyosha represents faith and compassion. Through their interactions, Dostoevsky delves into existential questions about human nature, justice, and redemption. Considered one of the greatest works of world literature, The Brothers Karamazov remains a timeless exploration of the human soul.\n\n\n",
+      "borrowedBy": null,
+      "dueDate": null
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "fazl",
+      "email": "johndoe@example.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "ayan",
+      "email": "janesmith@example.com",
+      "password": "password"
+    },
+    {
+      "id": 3,
+      "name": "roj",
+      "email": "roj@example.com",
+      "password": "rojroj"
+    },
+    {
+      "id": 4,
+      "name": "ahmed",
+      "email": "ahmed@example.com",
+      "password": "ahmed123"
+    },
+    {
+      "id": 5,
+      "name": "oak",
+      "email": "oak@example.com",
+      "password": "oakoak"
+    }
+  ]
+}
