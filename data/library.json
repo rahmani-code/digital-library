@@ -16,8 +16,8 @@
       "author": "George Orwell",
       "genre": "Dystopian",
       "publishedYear": 1949,
-      "borrowedBy": "fazl",
-      "dueDate": "2025-02-01",
+      "borrowedBy": null,
+      "dueDate": null,
       "description": "'1984' is a chilling depiction of a totalitarian society under the rule of Big Brother. The protagonist, Winston Smith, works for the Party rewriting history, but begins to question the regime and seek the truth, making the novel a powerful critique of oppressive governments."
     },
     {
@@ -27,7 +27,7 @@
       "genre": "Fiction",
       "publishedYear": 1925,
       "borrowedBy": "fazl",
-      "dueDate": "2025-02-26",
+      "dueDate": "2025-02-27",
       "description": "Set in the Roaring Twenties, 'The Great Gatsby' tells the story of Jay Gatsby's obsession with the beautiful Daisy Buchanan. Through the eyes of Nick Carraway, the novel critiques the American Dream and explores themes of love, wealth, and betrayal."
     },
     {
@@ -101,16 +101,6 @@
       "description": "'The Alchemist' is an allegorical novel about a young shepherd named Santiago who embarks on a journey to find a treasure. Along the way, he learns profound lessons about listening to his heart, following his dreams, and finding fulfillment in the journey itself."
     },
     {
-      "id": 11,
-      "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
-      "author": "Robert C. Martin",
-      "genre": "Computer Science",
-      "publishedYear": 2008,
-      "borrowedBy": null,
-      "dueDate": null,
-      "description": "In 'Clean Code,' Robert C. Martin offers invaluable insights into writing clean, maintainable, and efficient code. The book provides practical advice on refactoring, testing, and design principles to help developers write code that is both readable and robust."
-    },
-    {
       "id": 12,
       "title": "Introduction to Algorithms",
       "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
@@ -161,22 +151,12 @@
       "description": "This romance novel follows the story of Abby Abernathy, a college student who is drawn into a whirlwind relationship with Travis Maddox, a bad boy with a troubled past. It's a passionate, intense story of love, emotional growth, and the complexities of relationships."
     },
     {
-      "id": 17,
-      "title": "The Chemistry of Death",
-      "author": "Simon Beckett",
-      "genre": "Crime, Thriller, Mystery",
-      "publishedYear": 2006,
-      "borrowedBy": "ayan",
-      "dueDate": "2025-02-01",
-      "description": "In this gripping thriller, forensic anthropologist David Hunter is called to a rural English village to investigate a series of mysterious deaths. As he uncovers secrets buried deep within the town, Hunter is drawn into a chilling and dangerous investigation that tests his skills and his moral compass."
-    },
-    {
       "id": 1739395168837,
       "title": "The Brothers Karamazov",
       "author": "Fyodor Dostoevsky",
       "genre": "Philosophical Fiction, Psychological Fiction",
       "publishedYear": "1880",
-      "description": "The Brothers Karamazov is a profound philosophical novel that explores deep themes of faith, doubt, free will, and morality through the lives of the three Karamazov brothers—Dmitri, Ivan, and Alyosha. The novel revolves around their strained relationship with their corrupt and selfish father, Fyodor Pavlovich Karamazov, culminating in a dramatic murder mystery. Each brother represents a different ideological stance: Dmitri embodies passion and sensuality, Ivan wrestles with intellectualism and atheism, while Alyosha represents faith and compassion. Through their interactions, Dostoevsky delves into existential questions about human nature, justice, and redemption. Considered one of the greatest works of world literature, The Brothers Karamazov remains a timeless exploration of the human soul.\n\n\n",
+      "description": "The Brothers Karamazov is a profound philosophical novel that explores deep themes of faith, doubt, free will, and morality through the lives of the three Karamazov brothers—Dmitri, Ivan, and Alyosha. ",
       "borrowedBy": null,
       "dueDate": null
     }
@@ -211,6 +191,12 @@
       "name": "oak",
       "email": "oak@example.com",
       "password": "oakoak"
+    },
+    {
+      "id": 6,
+      "name": "john",
+      "email": "john@example.com",
+      "password": "123545"
     }
   ]
 }

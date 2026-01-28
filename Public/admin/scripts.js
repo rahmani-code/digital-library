@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => response.json())
       .then((users) => {
         const userList = document.getElementById("user-list");
-        userList.innerHTML = ""; // Clear existing users
+        userList.innerHTML = "";
         for (const user of users) {
           const row = document.createElement("tr");
-          row.setAttribute("data-id", user.id); // Set data-id for the row
+          row.setAttribute("data-id", user.id);
           row.innerHTML = `
                         <td>${user.name}</td>
                         <td>${user.email}</td>
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((response) => {
           if (response.ok) {
             userForm.reset();
-            fetchUsers(); // Refresh the user list
+            fetchUsers();
           } else {
             console.error("Error adding user:", response.statusText);
           }
@@ -55,12 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch((error) => console.error("Error adding user:", error));
     });
 
-    // Initial fetch of users
     fetchUsers();
   };
 
   const updateDashboardMetrics = (books) => {
-    const activeUsersCount = 120; // Replace with actual logic to fetch active users
+    const activeUsersCount = 120;
     const availableBooksCount = books.filter((book) => !book.borrowedBy).length;
     const borrowedBooksCount = books.filter((book) => book.borrowedBy).length;
     const overdueBooksCount = books.filter(
@@ -79,10 +78,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => response.json())
       .then((books) => {
         const bookList = document.getElementById("book-list");
-        bookList.innerHTML = ""; // Clear existing books
+        bookList.innerHTML = "";
         for (const book of books) {
           const row = document.createElement("tr");
-          row.setAttribute("data-id", book.id); // Set data-id for the row
+          row.setAttribute("data-id", book.id);
           row.innerHTML = `
             <td>${book.title}</td>
             <td>${book.author}</td>
@@ -95,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
           `;
           bookList.appendChild(row);
         }
-        updateDashboardMetrics(books); // Update dashboard metrics after fetching books
+        updateDashboardMetrics(books);
       })
       .catch((error) => console.error("Error fetching books:", error));
   };
@@ -104,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bookForm = document.getElementById("book-form");
 
     bookForm.addEventListener("submit", (e) => {
-      e.preventDefault(); // Prevent the default form submission
+      e.preventDefault();
 
       const title = document.getElementById("book-title").value;
       const author = document.getElementById("author").value;
@@ -112,13 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const publishedYear = document.getElementById("published-year").value;
       const description = document.getElementById("description").value;
 
-      // Check if all fields are filled
       if (!title || !author || !genre || !publishedYear || !description) {
-        alert("Please fill in all fields."); // Alert if any field is empty
+        alert("Please fill in all fields.");
         return;
       }
 
-      // Send the data to the server
       fetch("/api/books", {
         method: "POST",
         headers: {
@@ -134,8 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
       })
         .then((response) => {
           if (response.ok) {
-            bookForm.reset(); // Reset the form
-            fetchBooks(); // Refresh the book list
+            bookForm.reset();
+            fetchBooks();
           } else {
             console.error("Error adding book:", response.statusText);
           }
@@ -143,7 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch((error) => console.error("Error adding book:", error));
     });
 
-    // Initial fetch of books
     fetchBooks();
   };
 
@@ -185,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
       .then((response) => {
         if (response.ok) {
-          fetchUsers(); // Refresh the user list
+          fetchUsers();
         } else {
           console.error("Error deleting user:", response.statusText);
         }
@@ -203,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
       .then((response) => {
         if (response.ok) {
-          fetchUsers(); // Refresh the user list
+          fetchUsers();
         } else {
           console.error("Error editing user:", response.statusText);
         }
@@ -217,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
       .then((response) => {
         if (response.ok) {
-          fetchBooks(); // Refresh the book list
+          fetchBooks();
         } else {
           console.error("Error deleting book:", response.statusText);
         }
@@ -241,7 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
       .then((response) => {
         if (response.ok) {
-          fetchBooks(); // Refresh the book list
+          fetchBooks();
         } else {
           console.error("Error editing book:", response.statusText);
         }
@@ -249,25 +245,22 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Error editing book:", error));
   };
 
-  // Add event listeners to the edit and delete buttons in the book table
   const setupBookTableEvents = () => {
     const bookList = document.getElementById("book-list");
     bookList.addEventListener("click", (e) => {
       if (e.target.classList.contains("delete-book")) {
         const row = e.target.closest("tr");
-        const id = row.dataset.id; // Assuming you set data-id on the row
+        const id = row.dataset.id;
         deleteBook(id);
       } else if (e.target.classList.contains("edit-book")) {
         const row = e.target.closest("tr");
-        const id = row.dataset.id; // Assuming you set data-id on the row
+        const id = row.dataset.id;
         const title = row.querySelector("td:nth-child(1)").textContent;
         const author = row.querySelector("td:nth-child(2)").textContent;
         const genre = row.querySelector("td:nth-child(3)").textContent;
         const publishedYear = row.querySelector("td:nth-child(4)").textContent;
         const description = row.querySelector("td:nth-child(5)").textContent;
 
-        // Here you can implement a modal or prompt to edit the book details
-        // For simplicity, let's just log the values
         console.log("Edit Book:", {
           id,
           title,
@@ -276,36 +269,28 @@ document.addEventListener("DOMContentLoaded", () => {
           publishedYear,
           description,
         });
-        // Call editBook function with new values
-        // editBook(id, newTitle, newAuthor, newGenre, newPublishedYear, newDescription);
       }
     });
   };
 
-  // Add event listeners to the edit and delete buttons in the user table
   const setupUserTableEvents = () => {
     const userList = document.getElementById("user-list");
     userList.addEventListener("click", (e) => {
       if (e.target.classList.contains("delete-user")) {
         const row = e.target.closest("tr");
-        const id = row.dataset.id; // Assuming you set data-id on the row
+        const id = row.dataset.id;
         deleteUser(id);
       } else if (e.target.classList.contains("edit-user")) {
         const row = e.target.closest("tr");
-        const id = row.dataset.id; // Assuming you set data-id on the row
+        const id = row.dataset.id;
         const name = row.querySelector("td:nth-child(1)").textContent;
         const email = row.querySelector("td:nth-child(2)").textContent;
 
-        // Here you can implement a modal or prompt to edit the user details
-        // For simplicity, let's just log the values
         console.log("Edit User:", { id, name, email });
-        // Call editUser function with new values
-        // editUser(id, newName, newEmail);
       }
     });
   };
 
-  // Call these setup functions after fetching users and books
   fetchUsers();
   fetchBooks();
   setupUserTableEvents();

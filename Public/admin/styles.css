@@ -40,11 +40,11 @@ body.dark-mode .sidebar {
 .sidebar-header {
   text-align: center;
   padding: 10px 0;
-  color: #ffffff; /* Ensure text is visible in both modes */
+  color: #ffffff;
 }
 
 body.dark-mode .sidebar-header {
-  color: #ffffff; /* Ensure text is visible in dark mode */
+  color: #ffffff;
 }
 
 .sidebar-menu {
@@ -105,12 +105,12 @@ section {
 }
 
 h1 {
-  color: #ffffff; /* Ensure text is visible in both modes */
+  color: #ffffff;
   transition: color 0.3s ease;
 }
 
 h2 {
-  color: #35424a; /* Revert subheadings to original color */
+  color: #35424a;
   transition: color 0.3s ease;
 }
 
@@ -174,7 +174,7 @@ body.dark-mode .metrics-table tr:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 20px; /* Add margin to separate from the text */
+  margin-top: 20px;
 }
 
 body.dark-mode #mode-toggle {
@@ -231,16 +231,15 @@ form input {
 }
 
 form textarea {
-  width: 100%; /* Ensure it takes full width */
-  padding: 8px; /* Add padding for better appearance */
-  margin-bottom: 10px; /* Space below the textarea */
-  border: 1px solid #ddd; /* Match the border style of other inputs */
-  border-radius: 5px; /* Match the border radius of other inputs */
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-/* Ensure the button is styled consistently */
 form button {
-  margin-top: 10px; /* Add margin to separate from the textarea */
+  margin-top: 10px;
 }
 
 form button {

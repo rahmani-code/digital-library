@@ -33,7 +33,6 @@ router.get("/", (req, res) => {
 // Add new book
 router.post("/", (req, res) => {
   const { title, author, genre, publishedYear, description } = req.body;
-  console.log("Received data:", req.body); // Log the incoming data
 
   if (!title || !author || !genre || !publishedYear || !description) {
     return res.status(400).json({ error: "All fields are required." });
@@ -101,7 +100,7 @@ router.delete("/:id", (req, res) => {
 // Add this route to handle borrowing a book
 router.post("/:id/borrow", (req, res) => {
   const { id } = req.params;
-  const { user } = req.body; // Get the user from the request body
+  const { user } = req.body;
 
   const booksData = readBooksData();
   const book = booksData.books.find((b) => b.id === parseInt(id));
@@ -114,19 +113,18 @@ router.post("/:id/borrow", (req, res) => {
     return res.status(400).json({ error: "Book is already borrowed." });
   }
 
-  // Update the book's borrowedBy and calculate the dueDate (2 weeks from now)
   book.borrowedBy = user;
   const dueDate = new Date();
-  dueDate.setDate(dueDate.getDate() + 14); // Set due date to 14 days from now
-  book.dueDate = dueDate.toISOString().split("T")[0]; // Format to YYYY-MM-DD
+  dueDate.setDate(dueDate.getDate() + 14);
+  book.dueDate = dueDate.toISOString().split("T")[0];
 
-  writeBooksData(booksData); // Write the updated data back to the file
-  res.status(200).json(book); // Return the updated book
+  writeBooksData(booksData);
+  res.status(200).json(book);
 });
 
 router.post("/:id/return", (req, res) => {
   const { id } = req.params;
-  const { user } = req.body; // Get the user from the request body
+  const { user } = req.body;
 
   const booksData = readBooksData();
   const book = booksData.books.find((b) => b.id === parseInt(id));
@@ -139,7 +137,6 @@ router.post("/:id/return", (req, res) => {
     return res.status(400).json({ error: "Book is not borrowed." });
   }
 
-  // Check if the user returning the book is the same as the user who borrowed it
   if (book.borrowedBy !== user) {
     return res
       .status(403)
