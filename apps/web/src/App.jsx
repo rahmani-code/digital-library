@@ -3,9 +3,9 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
   NavLink,
 } from "react-router-dom";
+
 import "./index.css";
 import Home from "./components/Home";
 import Book from "./components/Book";

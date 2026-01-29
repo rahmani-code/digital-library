@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../index.css";
+import videoSource from "../assets/lib.mp4";
 
 function Home() {
   const [query, setQuery] = useState("");
@@ -27,7 +28,7 @@ function Home() {
       const results = books.filter(
         (book) =>
           book.title.toLowerCase().includes(searchTerm) ||
-          book.author.toLowerCase().includes(searchTerm)
+          book.author.toLowerCase().includes(searchTerm),
       );
       setFilteredBooks(results);
     } else {
@@ -38,7 +39,7 @@ function Home() {
   return (
     <section className="hero-section">
       <video autoPlay loop muted className="background-video">
-        <source src={require("../assets/lib.mp4")} type="video/mp4" />
+        <source src={videoSource} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="hero-overlay"></div>

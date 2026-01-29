@@ -8,7 +8,6 @@ const filePath = "./data/library.json";
 
 const readData = () => {
   const data = fs.readFileSync(filePath, "utf-8");
-  console.log(data); // Check the structure of the data
   return JSON.parse(data); // Ensure this returns the correct structure
 };
 const writeData = (data) =>
@@ -87,7 +86,7 @@ router.post("/login", (req, res) => {
   const { name, password } = req.body;
   const data = readData(); // Read the data from the JSON file
   const user = data.users.find(
-    (u) => u.name === name && u.password === password
+    (u) => u.name === name && u.password === password,
   ); // Access users from data
 
   if (user) {
